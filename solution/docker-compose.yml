@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  csvserver:
+    image: infracloudio/csvserver:latest
+    restart: always
+    environment:
+      - CSVSERVER_BORDER=Orange
+    ports:
+      - "9393:9300"
+    volumes:
+      - /home/ubuntu/csvserver/solution/inputFile:/csvserver/inputdata
