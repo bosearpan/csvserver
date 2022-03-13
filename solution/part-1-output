@@ -1,0 +1,10 @@
+--2022-03-13 08:18:50--  http://3.92.180.199:9393/raw
+Connecting to 3.92.180.199:9393... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 142 [text/plain]
+Saving to: ‘raw’
+
+     0K                                                       100% 3.12M=0s
+
+2022-03-13 08:18:50 (3.12 MB/s) - ‘raw’ saved [142/142]
+
