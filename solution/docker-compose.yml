@@ -9,3 +9,17 @@ services:
       - "9393:9300"
     volumes:
       - /home/ubuntu/csvserver/solution/inputFile:/csvserver/inputdata
+
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus:/etc/prometheus  #mounts prometheus folder in the right place for the image to pick up our configuration.
+      - prometheus-data:/prometheus   #store the scraped data so that they are available after a restart.
+    #To reload configuration files without restarting Prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+
+
+volumes:
+  prometheus-data:
